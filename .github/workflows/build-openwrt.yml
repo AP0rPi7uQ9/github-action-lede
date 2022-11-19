@@ -1,4 +1,4 @@
-name: Build luci-app-xray
+name: Build LEDE
 
 on:
   repository_dispatch:
