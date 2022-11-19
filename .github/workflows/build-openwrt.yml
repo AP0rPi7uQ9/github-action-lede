@@ -18,7 +18,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
@@ -79,6 +79,7 @@ jobs:
       
     - name: Download dl library
       run: |
+        sudo -E apt -qq full-upgrade -y
         cd src
         echo -e "$(nproc) thread compile"
         make download -j$(nproc) || make download -j1
