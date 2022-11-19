@@ -60,10 +60,6 @@ jobs:
         chmod +x $DIY_P2_SH
         cd src
         $GITHUB_WORKSPACE/$DIY_P2_SH
-      
-    - name: Load custom configuration
-      run: |
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE src/.config
         
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
