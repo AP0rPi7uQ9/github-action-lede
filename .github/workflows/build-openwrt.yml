@@ -83,7 +83,6 @@ jobs:
       
     - name: Download dl library
       run: |
-        sudo -E apt -qq full-upgrade -y
         cd src
         echo -e "$(nproc) thread compile"
         make download -j$(nproc) || make download -j1
